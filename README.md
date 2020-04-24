@@ -6,3 +6,5 @@
 		
 2. Build a first demo about spring using xml [refer link](https://github.com/colenhuttran/spring-seftstudy/tree/master/spring_bean_xml)
 
+3. Build a first demo about spring using annotation [refer link](https://github.com/colenhuttran/spring-seftstudy/tree/master/spring_bean_annotation)
+
