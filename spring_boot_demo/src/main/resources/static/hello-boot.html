@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>Hello Spring Boot</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		
+		<script>
+			function sendNameToControler(){
+				$.get('http://localhost:8080/greeter/' + $('#helloform input[name=myName]').val(),
+					function(data){
+						$("#result").text(data.message + ' at ' + data.time);
+					},
+					'json'
+					);
+			};
+		</script>
+			
+	</head>
+	
+	<body>
+		<form id="helloform">
+			<p> Hello, what is your name?
+				<input type="text" name="myName" />
+				<input type="button" value="Send" onclick="sendNameToControler()" />
+			</p>
+		</form>
+		
+		<p id="result"></p>
+		
+	</body>
+
+</html>
