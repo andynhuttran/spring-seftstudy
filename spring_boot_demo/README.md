@@ -30,8 +30,8 @@ Guide to build this project
     Static resource have to create under **src/main/resources/static/** in SPRING BOOT.
     
     In **hello-boot.html**, we use an JQUERY to send request to Server, and processed by back-end (above Spring Boot, Controllers),
-    then, get respone at back-end, then print it out.
+    then, get respone in front-end, then print it out.
     
-    That is done at font-end.
+    That is done at front-end.
     
 4. Access http://localhost:8080/hello-boot.html, type your name and see the result
