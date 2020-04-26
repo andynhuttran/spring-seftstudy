@@ -8,3 +8,5 @@
 
 3. Build a first demo about spring using annotation [refer link](https://github.com/colenhuttran/spring-seftstudy/tree/master/spring_bean_annotation)
 
+4. Build a first demo about SPRING BOOT [refer link](https://github.com/colenhuttran/spring-seftstudy/tree/master/spring_boot_demo)
+
