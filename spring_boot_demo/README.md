@@ -21,7 +21,7 @@ Guide to build this project
     Greeter in **JSON** format, SPRING BOOT do that automatically by using **jackson** lib.
     
     Beside that, **private GreeterRepository service = null;** with **@Autowired**, the annotation come from SPRING CORE, tell that 
-    SPRING have to find GreeterRepository bean to inject on. Surely, GreeterRepository have to mark **Repository**
+    SPRING have to find GreeterRepository bean to inject on. Surely, GreeterRepository have to be marked **Repository**
     
     That is done at back-end.
     
