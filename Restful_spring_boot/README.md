@@ -49,9 +49,15 @@
     Take a look to **@RequestMapping("/api/v1/banks")**, it tell that URLs which contain format http://<your-web-sside>/api/v1/banks 
     will be handled by this controller. Example http://localhost:8080/api/v1/banks
     
-6. 
-
     
+    Go on to getBanks function with **@GetMapping** annotation, it tell SPRING BOOT that this function only accept Get request. In      additions, **@RequestParam(name = "top", required = false, defaultValue = "0")** paramater in url (e.x top=5) willint top be assiged to variable **int top**, it is not required, and default value is 0.
+    
+6. Then, take a look to exception handling in Spring Boot 
+[refer link](https://github.com/colenhuttran/spring-seftstudy/tree/master/Restful_spring_boot/src/main/java/com/javalearning/rest/exception)
+
+    It is very importance to handle exception and feedback to client, to know what the error is. Class **BaseExceptionHandler** with annotation **@ControllerAdvice** and extends **ResponseEntityExceptionHandler** tell that, this file will handle all exception in App.
+
+   **@ExceptionHandler** and follow with a Exception class like Throwable.class, MethodArgumentTypeMismatchException.class, BankException.class tells that when there is error, it will be handled by the functions in the class. It's like a big try..catch of Application.
   
   
   
