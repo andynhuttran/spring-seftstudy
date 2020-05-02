@@ -17,7 +17,7 @@ public class BankService {
 	
 	private BankDAO bankDAO;
 	
-	@Autowired()
+	@Autowired
 	public BankService(@Qualifier("fakeDAO") BankDAO bankDAO) {
 		this.bankDAO = bankDAO;
 	}

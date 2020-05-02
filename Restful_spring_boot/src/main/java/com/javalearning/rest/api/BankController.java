@@ -28,8 +28,8 @@ public class BankController {
 	public List<Bank> getBanks(@RequestParam(name = "top", required = false, defaultValue = "0") int top){
 		System.out.println(top);
 		
-		if (top <= 0) { //handle exception
-			String msg = String.format("top = %d is not accepted, it should be bigger than 0");
+		if (top < 0) { //handle exception
+			String msg = String.format("top = %d is not accepted, it should be bigger than 0", top);
 			throw new BankException(msg);
 		}
 		
