@@ -23,7 +23,7 @@ import com.javalearning.rest.service.PersonService;
 @RequestMapping("/person")
 public class PersonController {
 	
-	private final static String OK_MESSAGE = "OK";
+	private final static String OK_MESSAGE = "OK OK";
 	private PersonService service;
 	
 	@Autowired
