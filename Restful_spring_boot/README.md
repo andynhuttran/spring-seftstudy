@@ -59,6 +59,7 @@
 
    **@ExceptionHandler** and follow with a Exception class like Throwable.class, MethodArgumentTypeMismatchException.class, BankException.class tells that when there is error, it will be handled by the functions in the class. It's like a big try..catch of Application.
   
+7. To test the Restful API, we should us **Postman** to send request to server, then review the result which is sent back to Postman.
   
   
 
