@@ -1,23 +1,40 @@
 package com.javalearning.rest.webservices.user;
 
 import java.util.Date;
+import java.util.List;
 
-import javax.validation.Valid;
-import javax.validation.constraints.NotBlank;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Size;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+
+
+@Entity
 public class User {
 	
+	@Id
+	@GeneratedValue
+	@JsonIgnore
 	private Integer id;	
 	
-	@Valid
 	@Size(min = 2)
+	@NotNull(message = "name should be not null")
 	private String name;
 	
 	@Past
 	private Date birthDay;
+	
+	
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "user")
+	private List<Post> posts;
+
 	
 	public User() {
 		
@@ -52,6 +69,22 @@ public class User {
 	public void setBirthDay(Date birthDay) {
 		this.birthDay = birthDay;
 	}
+
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", name=" + name + ", birthDay=" + birthDay + "]";
+	}
+
+	public List<Post> getPosts() {
+		return posts;
+	}
+
+	public void setPosts(List<Post> posts) {
+		this.posts = posts;
+	}
+	
+	
+	
 	
 	
 	

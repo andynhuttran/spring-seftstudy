@@ -7,6 +7,7 @@ import javax.jws.soap.SOAPBinding.Use;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.hateoas.server.mvc.ControllerLinkBuilder;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -48,7 +49,9 @@ public class UserController {
 		
 		if (user == null) {
 			throw new UserNotFoundException("Can not found user-id: " + id);
-		}		
+		}
+		
+		
 		return user;
 	}
 	
